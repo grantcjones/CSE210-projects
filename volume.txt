@@ -1,0 +1,31 @@
+Date: 2022-04-30
+Tire Width (mm): 185.0
+Tire Aspect Ratio: 50.0
+Wheel Diameter (in): 14.0
+Tire Volume (liters): 24.09
+Date: 2022-04-30
+Tire Width (mm): 185.0
+Tire Aspect Ratio: 50.0
+Wheel Diameter (in): 14.0
+Tire Volume (liters): 24.09
+Date: 2022-04-30
+Tire Width (mm): 185.0
+Tire Aspect Ratio: 50.0
+Wheel Diameter (in): 14.0
+Tire Volume (liters): 24.09
+Date: 2022-04-30
+Tire Width (mm): 185.0
+Tire Aspect Ratio: 50.0
+Wheel Diameter (in): 14.0
+Tire Volume (liters): 24.09
+Date: 2022-04-30
+Tire Width (mm): 185.0
+Tire Aspect Ratio: 50.0
+Wheel Diameter (in): 14.0
+Tire Volume (liters): 24.09
+Date: 2022-04-30
+Tire Width (mm): 185.0
+Tire Aspect Ratio: 50.0
+Wheel Diameter (in): 14.0
+Tire Volume (liters): 24.09
+Date: 2022-04-30
