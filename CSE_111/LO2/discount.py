@@ -4,7 +4,7 @@ date_time = datetime.now()
 
 week_day = date_time.weekday()
 
-subtotal = float(input("What is your subtotal?: "))
+subtotal = float(input("Please enter the subtotal?: "))
 
 if week_day != 1 or 2:
     
@@ -24,5 +24,5 @@ else:
         total = subtotal + sales_tax
     
 
-print(f"{sales_tax:.2f}")
-print(f"{total:.2f}")
+print(f"Sales tax amount: {sales_tax:.2f}")
+print(f"Total: {total:.2f}")

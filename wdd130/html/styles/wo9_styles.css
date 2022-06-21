@@ -1,0 +1,68 @@
+
+body {
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    border-radius: 20%;
+}
+
+#content {
+    grid-column: 2/3;
+    border: 2px solid red;
+    border-radius: 5%;
+}
+
+
+img {
+    width: auto;
+    height: auto;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+}
+
+#timeline {
+    text-align: center;
+}
+
+#post_num {
+    text-align: center;
+}
+
+#lorem_ipsum {
+    text-align: center;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    border: 2px solid blue;
+}
+
+.footer_txt {
+
+    text-align: center;
+    border: 2px solid green;
+}
+
+.num_display {
+    margin-bottom: 0;
+}
+
+.num_title {
+    margin-top: 0;
+}
+
+#num_read{
+    grid-column: 1/2;
+    border: 2px solid blue;
+}
+
+#num_veiw {
+    grid-column: 2/3;
+    border: 2px solid blue;
+}
+
+#num_comment {
+    grid-column: 3/4;
+    border: 2px solid blue;
+}
+

@@ -1,0 +1,54 @@
+main {
+    height: 100%;
+}
+
+h1 {
+    color: white;
+}
+
+h1:hover {
+    color:black;
+}
+
+.text {
+    text-align: center;
+    margin: 0 auto;
+    width: 40%;
+}
+
+.whitetext {
+    color: white;
+}
+
+#mission_statement {
+    font-size: x-small;
+}
+
+#citation {
+    font-weight: bold;
+    font-size: medium;
+}
+
+#large-quote {
+    text-align:center;
+    margin: 0 auto;
+    width: 80%;
+}
+
+#list {
+    text-align: left;
+    font-size:x-small;
+}
+
+#nametitle {
+    font-size: x-small;
+
+}
+
+* {
+    background-color:pink;
+}
+
+* {
+    border: 2px ;
+}

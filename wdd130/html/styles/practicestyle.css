@@ -1,0 +1,47 @@
+#bubbles {
+    width: 100%;
+}
+
+body {
+    background-color: gray;
+}
+
+.image-box {
+    display: inline-block;
+    text-align: justify;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: gray;
+    border-radius: 50%;
+    border: 20px solid rgb(41, 39, 39);
+}
+
+center {
+    align-items: center;
+    
+}
+
+#desk {
+    
+    width: 16%;
+    margin-left: 12%;
+    margin-right: 5%;
+}
+
+#graphic {
+    width: 16%;
+    margin-left: 5%;
+    margin-right: 5%;
+
+}
+
+#person {
+    width: 16%;
+    margin-left: 5%;
+    margin-right: 10%;
+
+}
+
+/* * {
+    border: 2px solid blue;
+} */
