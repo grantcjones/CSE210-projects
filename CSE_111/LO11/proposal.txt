@@ -1,0 +1,70 @@
+CSE 111 Proposal for a Student Chosen Program
+
+    (This is a proposal. All proposals are written with our best
+    knowledge at the beginning of a project. As we progress from the
+    beginning to the end of a project, we gain more knowledge, and we
+    change some of our proposed ideas. This is part of completing any
+    project and is fine.  However, we still must write a proposal so
+    that our teachers or supervisors know what we intend to do. Please
+    answer each of the following questions to the best of your
+    knowledge.)
+
+1. What is the title of your program?
+
+    Showing Window AC Effectiveness: Temperature and Humidity V.S. Time
+    (File name will be final_project.py)
+
+2. What real-world problem will your program address or help to solve?
+
+    Once my newborn daughter is old enough to sleep in her crib rather than her bassinet,
+    she will be sleeping in our second bedroom. Our apartment, much like most apartments 
+    here in Rexburg, does not have air conditioning. Fortunately, we were able to purchase
+    and install a Window-AC-Unit in her room, but I was concerned that either it won't cool
+    the room enough for her, or it will increase humidity, or some other combination of issues
+    that could be uncomfortable/dangerous for her. So I set up an Arduino with a temperature/humidity
+    module, ran the AC on full with the door closed for several hours, and saved the readings
+    into a csv. file, but the temperature is in Celsius, and there are over 1000 data entries.
+    What I want my code to do is convert the temperature readings from Celsius to Fahrenheit,
+    and drawing and displaying the readings on a graph so I can see if the AC is effecive.
+
+3. What will you learn from developing this program?
+    I will learn how to put everything that I've learned this semester together. I will be using a csv
+    file with the Arduino's readings, and I will convert it's contents into a compact dictionary to
+    pull from, and I will need to modify the contents to be usable for temperature conversion and 
+    to display on the graph. This will require loops, functions, and importing libraries. I'll be 
+    using the draw2d.py library from a previous lesson to draw the graph. I've learned most of these
+    things separately, so it'll be interesting to see if I can put them together.
+
+4. What Python modules will your program use?
+
+    (Some examples are: csv, datetime, functools, matplotlib, math,
+    pandas, pytest, random, requests, and tkinter.)
+
+    It will use csv and pytest, and the draw2d.py library as well.
+
+5. Will you separate your Python program into functions that each
+perform a single task?
+
+    (Remember that the most reusable functions don't get user input and
+    don't print results but instead have parameters and return a result.
+    Functions that get user input and print results are important and do
+    useful work but are not easily reusable.)
+
+    (Remember also that it's hard to test functions that get user input
+    and print results. It's easy to test functions that don't get user
+    input and don't print results but instead have parameters and return
+    a result. Therefore, you should write most of your program functions
+    to have parameters and return a result.)
+
+    It will separte the tasks into functions, most likely ones that will
+    create the compound dictionary, convert Celsius to Fahrenheit, and 
+    draw the graph.
+
+6. Will you write test functions to test at least two of your program
+functions?
+
+    I'll write test functions to test the temperature conversion, and I 
+    think I might be able to create one to test where the coordinates will
+    be on the graph in a few places (Part of the information in the csv is 
+    timestamps, which will be the key in the compound dictionary, so I 
+    should be able to use that).

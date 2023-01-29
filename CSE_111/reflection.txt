@@ -1,0 +1,35 @@
+Please respond thoroughly (at least two sentences for each question) to
+the following three questions.
+
+1. Describe an experience you had this semester where you saw the power of
+functions.
+
+    I have a few good examples, but when we created a drawing with functions really helped 
+me see just how important and useful they are. I originally had programmed my code to do 
+what it was supposed to do, but my understanding of functions was very flawed, and so I 
+had to redo pretty much the whole thing. When I learned the relationship that fucntions, 
+parameters, and arguments have, everything clicked. I was able to sail through the rest of
+my assignment, and I actually enjoyed myself when I could more easily use the functions.
+
+
+2. In your judgment, what is the value of test functions?
+
+    The value of a test function, in my opinion, is to test out multiple aspects of a function
+at the same time and in an organized manner. It also promotes understading of what one wants 
+to accomplish with their function. You can't write a test function if you don't know what you're 
+testing.
+
+3. Describe your process for troubleshooting and fixing a program that
+has a problem. What is one thing you can do to improve your process?
+
+    My original method was to do things that would either show up in the error message, or would 
+locate the error based on if they were before or after it. (This included adding print statements
+to check if variables were being affected the way I wanted them to.) I actually learned a much, much 
+better method through my final project. I go to church with a well-experienced Software Engineer, 
+and he offered help if I needed it. I had most of my code finished, but the last part just wouldn't 
+execute what I expected it to do. Once I got with my friend, I explained the problem, and where it 
+should be, but then he took me to the top of the program, and walked through line-by-line what the code 
+was and what I expected it to do. Once we got to the trouble section, it eventually became clear that 
+my code wasn't an issue as much as my understanding about drawing lines on a graph was. 
+(Side note, I now have a potential job offer as a junior software engineer because of this interaction)
+
