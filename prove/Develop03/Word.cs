@@ -1,23 +1,20 @@
 
 class Word
 {
-
+    public string _wordItem;
     public bool _hide = false;
+    public List<string> _scriptureArray = new List<string>();
 
-    public void IfHidden()
+    public Word(string wordItem)
     {
-        Random rng = new Random();
-        foreach (string wordItem in _scriptureList)
-        {
-            
-            if (_hide == true)
-            {
-                
-            }
-            if (_hide == false)
-            {
+        IfHidden(wordItem);
+    }
 
-            }
+    public void IfHidden(string wordItem)
+    {
+        foreach (char letter in wordItem)
+        {
+            Console.Write("_");
         }
     }
 

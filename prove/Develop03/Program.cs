@@ -3,7 +3,7 @@ using System;
 class Program
 {
     static void Main(string[] args)
-    {   
+    {
         Console.Write("Enter name of book: ");
         string book = Console.ReadLine();
 
@@ -21,7 +21,21 @@ class Program
 
         Console.Write("Enter scripture text: ");
         string text = Console.ReadLine();
-        
+
+        Console.Write("Enter 'yes' or 'no': ");
+        string userBool = Console.ReadLine();
+
+        string yes = "yes";
+        string no = "no";
+
+        if (userBool == yes)
+        {
+            Console.WriteLine("It's true.");
+        }
+        if (userBool == no)
+        {
+            Console.WriteLine("It's false.");
+        }
 
         Reference r1 = new Reference();
         {
