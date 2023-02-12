@@ -1,21 +1,31 @@
 
 class Word
 {
-    public string _wordItem;
-    public bool _hide = false;
-    public List<string> _scriptureArray = new List<string>();
+    // public string _wordItem;
+    // public bool _hide = false;
 
     public Word(string wordItem)
     {
         IfHidden(wordItem);
     }
 
-    public void IfHidden(string wordItem)
+    public string IfHidden(string wordItem)
     {
-        foreach (char letter in wordItem)
+        if (wordItem.IndexOf("_") == -1)
         {
-            Console.Write("_");
+            string underscore = "";
+            foreach (char letter in wordItem)
+            {
+                underscore = "_" + underscore;
+                // return ("_");
+            }
+            return (underscore + " ");
         }
+        else
+        {
+            return wordItem;
+        }
+
     }
 
 }
