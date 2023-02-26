@@ -1,9 +1,114 @@
 using System;
-
+using static System.Console;
 class Program
 {
+    static int Menu()
+    {
+        Console.WriteLine("Menu Options:");
+        Console.WriteLine("    1. Start Breathing activity");
+        Console.WriteLine("    2. Start Reflecting Activity");
+        Console.WriteLine("    3. Start Listing Activity");
+        Console.WriteLine("    4. Quit");
+        Console.WriteLine("Select a choice from the menu:");
+        string userChoice = Console.ReadLine();
+        int choice = Int32.Parse(userChoice);
+        return choice;
+    }
+
+    static void CountDown()
+    {
+        string[] spinner = {"/", "-", "\\", "|"};
+        foreach (string i in spinner)
+        {
+            Write(i);
+            Write("\b \b");
+        }
+        // Console.Write("/");
+        // Thread.Sleep(500);
+
+        // Console.Write("\b \b"); // Erase the + character
+
+    }
+
+
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Develop04 World!");
+        WriteLine("Menu Options:");
+        WriteLine("    1. Start Breathing activity");
+        WriteLine("    2. Start Reflecting Activity");
+        WriteLine("    3. Start Listing Activity");
+        WriteLine("    4. Quit");
+        Write("Select a choice from the menu:");
+
+        string userInput = Console.ReadLine();
+        int contQuit = Int32.Parse(userInput);
+
+        
+
+        while (contQuit != 4)
+        {
+            if (contQuit == 1)
+            {   
+                
+                Breathing b1 = new Breathing("Breathing", "This activity will help you relax by walking your through breathing in and out slowly. Clear your mind and focus on your breathing.");
+                {                    
+                    Clear();                    
+                    int time = b1.SetActivity();
+                    Breathing b2 = new Breathing(time);
+                    Clear();
+                    WriteLine("Get ready.");
+                    b1.Spinner();
+                    b2.BreathCounter(time);
+                    b1.EndActivity(time);
+                    b1.Spinner(); //TODO Get rid of "Get ready" issue
+                    Clear();
+                }
+                contQuit = Menu();
+            }
+
+            if (contQuit == 2)
+            {
+                Reflecting r1 = new Reflecting("Reflecting", "This activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of your life.", 50);
+                {
+                    Clear();
+                    WriteLine("Get ready.");
+                    r1.Spinner();
+                    int time = r1.SetActivity();
+                    Clear();
+                    r1.Spinner();
+                    r1.Reflect(time); //TODO add time in method
+                    r1.EndActivity(time);
+                    Clear();
+                }
+                contQuit = Menu();
+
+            }
+
+            if (contQuit == 3) //TODO Correct all info to Listing activity instead of Reflecting
+            {
+                Listing l1 = new Listing("Listing", "This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.", 50);
+                {    
+                    Clear();
+                    WriteLine("Get ready.");
+                    l1.Spinner();
+                    int time = l1.SetActivity();
+                    Clear();
+                    l1.Spinner();
+                    l1.List(time); //TODO Finish method
+                    l1.EndActivity(time);
+                    l1.Spinner(); //TODO Get rid of "Get ready" issue
+                    Clear();
+                }
+                contQuit = Menu();
+            }
+        }
+
     }
+    // Better comments
+    // TODO DO THIS THING
+    // ! DON'T DO THIS THING
+    // ? Don't know how to do
+    // * lime green
+    //// show it's not supposed to be here
+   
 }
