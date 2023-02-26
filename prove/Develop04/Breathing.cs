@@ -4,7 +4,6 @@ using static System.Console;
 //! Class Completed: Do not change
 class Breathing : Activity
 {
-    private int _duration;
 
     public Breathing(string description, string name) : base(description, name)
     {
@@ -13,7 +12,7 @@ class Breathing : Activity
 
     public Breathing(int duration) : base(duration)
     {
-        _duration = duration;
+        
     }
 
     public void BreathCounter(int _duration)

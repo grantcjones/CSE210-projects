@@ -68,16 +68,17 @@ class Program
 
             if (contQuit == 2)
             {
-                Reflecting r1 = new Reflecting("Reflecting", "This activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of your life.", 50);
+                Reflecting r1 = new Reflecting("Reflecting", "This activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of your life.");
                 {
+                    Clear();
+                    int time = r1.SetActivity();
+                    Reflecting r2 = new Reflecting(time);
                     Clear();
                     WriteLine("Get ready.");
                     r1.Spinner();
-                    int time = r1.SetActivity();
-                    Clear();
-                    r1.Spinner();
-                    r1.Reflect(time); //TODO add time in method
+                    r2.Reflect(time);
                     r1.EndActivity(time);
+                    r1.Spinner();
                     Clear();
                 }
                 contQuit = Menu();
@@ -86,17 +87,17 @@ class Program
 
             if (contQuit == 3) //TODO Correct all info to Listing activity instead of Reflecting
             {
-                Listing l1 = new Listing("Listing", "This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.", 50);
+                Listing l1 = new Listing("Listing", "This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.");
                 {    
+                    Clear();
+                    int time = l1.SetActivity();
+                    Listing l2 = new Listing(time);
                     Clear();
                     WriteLine("Get ready.");
                     l1.Spinner();
-                    int time = l1.SetActivity();
-                    Clear();
-                    l1.Spinner();
-                    l1.List(time); //TODO Finish method
+                    l1.List(time);
                     l1.EndActivity(time);
-                    l1.Spinner(); //TODO Get rid of "Get ready" issue
+                    l1.Spinner();
                     Clear();
                 }
                 contQuit = Menu();

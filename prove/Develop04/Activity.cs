@@ -1,19 +1,15 @@
 using System;
 using static System.Console;
 
-//TODO Create something to handle Q for how long session
-//TODO Create Getters and Setters to get information from other classes?
 
 class Activity
 {
     private string _description;
     private string _name;
     private int _duration; // * in seconds
-    // private string _finishMessage; //TODO 'You have completed another ______ seconds of the _____ Activity
 
     public Activity(string name, string description)
     {
-        //! Might be accidental setter
         _description = description;
         _name = name;
     }
@@ -68,8 +64,7 @@ class Activity
     public string RandElement(List<string> arr)
     {
         Random random = new Random();
-        int max = arr.Count();
-        int rand = random.Next(0, max);
+        int rand = random.Next(0, 4);
         string chosenElement = arr[rand];
         return chosenElement;
     }
@@ -78,23 +73,17 @@ class Activity
     {
         Random random = new Random();
 
-        // Get the start time
         DateTime startTime = DateTime.Now;
 
-        // Ask questions until the time limit is reached
         while ((DateTime.Now - startTime).TotalSeconds < seconds)
         {
-            // Get a random question
-            string question = arr[random.Next(arr.Count)];
+            string question = arr[random.Next(arr.Count())];
 
-            // Ask the question
             Console.WriteLine(question);
 
-            // Get the user's answer
             string answer = Console.ReadLine();
 
-            // Echo the user's answer
-            Console.WriteLine("You answered: " + answer);
+            WriteLine();
         }
     }
 

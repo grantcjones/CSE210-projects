@@ -1,20 +1,23 @@
 using System;
 using static System.Console;
-// TODO Need random prompt generator
+
+//! I don't understand why, but whenever Line 50 is executed, RandElement seems to be reading _prompts as null. Everything else in the program works, including Listing (which uses RandElement much in the same way), so I'm not sure what's going on.
 
 class Reflecting : Activity
 {
-    private List<string> _prompts; // ? Create randgen, using constructor?
+    private List<string> _prompts;
     private List<string> _questions;
-    private List<string> _thoughts; //TODO Append user answers to list, need to display later?
+    private List<string> _thoughts; 
 
-    public Reflecting( string name, string description, int duration) : base(description, name)
+
+    public Reflecting( string name, string description) : base(name, description)
     {
         List<string> prompts = new List<string>
         {"Think of a time when you stood up for someone else.", 
         "Think of a time when you did something really difficult.", 
         "Think of a time when you helped someone in need.", 
-        "Think of a time when you did something truly selfless."
+        "Think of a time when you did something truly selfless.",
+        "Think of a time you were proud of an accomplishment."
         };
         _prompts = prompts;
 
@@ -35,30 +38,26 @@ class Reflecting : Activity
         _thoughts = thoughts;
     }
 
-
-    private string RandomPrompt()
+    public Reflecting(int duration) : base(duration)
     {
-        string prompt = RandElement(_prompts);
-        return prompt;
+        
     }
 
-    public void Reflect(int seconds) //todo add seconds in method
+    public void Reflect(int seconds) 
     {
         WriteLine("Consider the following prompt:");
         WriteLine();
-        Write($"  ---" + RandomPrompt() + "---");
+        Write($"  ---" + RandElement(_prompts) + "---"); //! I cannot understand why RandElement keeps passing _prompts as null; I tried as much as I could to fix that, and it was the one issue that decided to come up right before the due time
         WriteLine();
         WriteLine("When you have something in mind, press enter to continue.");
         Console.ReadLine();
         Write("Now ponder on each of the following questions as they related to this experience. ");
         CountDown();
         WriteLine();
-        QuestionTimer(20, _questions);
+        QuestionTimer(seconds, _questions);
 
-        //TODO add TimeLimit() from Base Class
 
     }
-        //Todo Create loop that spits out random questions, takes responses, and keeps going until a timer (duration) runs out.
         
     
     
