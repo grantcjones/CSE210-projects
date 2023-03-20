@@ -7,6 +7,8 @@ class Program
     static void Main(string[] args)
     {   
         List<string> goals = new List<string>();
+        List<Goal> goals2 = new List<Goal>();
+
         int count = 0;
 
         string MainMenu()
@@ -81,6 +83,7 @@ class Program
                     CheckListGoal clGoal = new CheckListGoal(name, description, pointValue, goalAmount);
                     {
                         string newGoal = clGoal.GetGoal();
+                        WriteLine(newGoal); //! TESTING
                         clGoal.AddToList(goals, newGoal);
                         start = MainMenu();
                     }
@@ -146,20 +149,26 @@ class Program
                 Write("Which goal did you accomplish?: ");
                 string userInput = ReadLine();
                 int userChoice = Int32.Parse(userInput);
-                string goalCompleted = goals[(userChoice - 1)]; //! Goal Selected
-                int goalType = goalCompleted.LastIndexOf(" " + 1);
+                string goalCompleted = goals[(userChoice - 1)]; // Goal Selected
+                WriteLine(goalCompleted); //! TESTING
+
+                int goalType = goalCompleted[(goals.Count()) - 1];
+
+                WriteLine(goalType); //! TESTING
                 int goalPoints = goalCompleted[goalCompleted.LastIndexOf(" ") - 1];
-                if (goalType == 1) //! For Simple Goal
+                WriteLine(goalPoints); //! TESTING
+                if (goalType == 1) // For Simple Goal
                 {
                     string result = goalCompleted.Replace("_", "X"); //TODO Does NOT WORK
+                    Console.WriteLine(result); // TESTING
                     goals[(userChoice - 1)] = result;
                     count += goalPoints;
                 }
-                else if (goalType == 2) //! For Eternal Goal
+                else if (goalType == 2) // For Eternal Goal
                 {
                     count += goalPoints;
                 }
-                else if (goalType == 3) //! For Checklist Goal
+                else if (goalType == 3) // For Checklist Goal
                 {
                     int currentIndex = goalCompleted.LastIndexOf("- ") - 1;
                     int currentAmount = goalCompleted[currentIndex];
@@ -178,7 +187,7 @@ class Program
                         count += goalPoints;
                     }
                 }
-                WriteLine();
+                WriteLine(count);
                 start = MainMenu();
             }
 

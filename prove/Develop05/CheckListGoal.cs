@@ -23,16 +23,16 @@ public class CheckListGoal : Goal
         return ($"[_] {_goalName} ({_description}) - {_currentAmount}/{_goalAmount} {_pointValue} {_type}"); //TODO Add Bonus
     }
 
-    public override bool IsCompleted(string myString) //TODO Add to option 4. Load?
+    public override void IsCompleted(string myString) //TODO Add to option 4. Load?
     {
-        if (_currentAmount > _goalAmount)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        // if (_currentAmount > _goalAmount)
+        // {
+        //     return true;
+        // }
+        // else
+        // {
+        //     return false;
+        // }
     }
     // {
     //     if (_currentAmount == _goalAmount)

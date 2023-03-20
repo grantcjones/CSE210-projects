@@ -20,16 +20,29 @@ public class SimpleGoal : Goal
         return ($"[_] {_goalName} ({_description}) {_pointValue} {_type}");
     }
 
-    public override bool IsCompleted(string myString)
+    public override void IsCompleted(string myString)
     {
-        int index = myString.IndexOf("X");
-        if (index != 1)
-        {
-            return true;
+        // int index = myString.IndexOf("X");
+        // if (index != 1)
+        // {
+        //     return true;
+        // }
+        // else
+        // {
+        //     return false;
+        // }
+
+        _isChecked = true;
+    }
+
+    public override void Display() {
+    
+        if (_isChecked) {
+            Console.WriteLine($"[X] {_goalName} ({_description})");
         }
-        else
-        {
-            return false;
+        else {
+
+            Console.WriteLine($"[ ] {_goalName} ({_description})");
         }
     }
 }

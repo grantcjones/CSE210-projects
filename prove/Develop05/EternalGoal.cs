@@ -20,8 +20,14 @@ public class EternalGoal : Goal
         return ($"[_] {_goalName} ({_description}) {_pointValue} {_type}");
     }
 
-    public override bool IsCompleted(string myString)
+    public override void IsCompleted(string myString)
     {
-        return false;
+
+    }
+
+    public override void Display() {
+
+        Console.WriteLine($"[ ] {_goalName} ({_description})");
+        
     }
 }

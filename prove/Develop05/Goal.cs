@@ -8,6 +8,8 @@ public abstract class Goal
     private string _description;
     private int _pointValue;
 
+    public bool _isChecked = false;
+
     public Goal()
     {
         DisplayList();
@@ -22,7 +24,7 @@ public abstract class Goal
 
     public abstract string GetGoal();
     //! To be used in other classes
-    public abstract bool IsCompleted(string myString);
+    public abstract void IsCompleted(string myString);
 
     public void AddToList(List<string> myList, string myString)
     {
@@ -33,6 +35,10 @@ public abstract class Goal
     public void DisplayList()
     {
         WriteLine(_goals);
+    }
+
+    public virtual void Display() {
+
     }
 
     public int Score(int points)
