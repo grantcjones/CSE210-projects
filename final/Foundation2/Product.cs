@@ -17,7 +17,7 @@ public class Product
 
     public string GetProduct()
     {
-        return ("Product: " + _name + ", ID:" + _productId);
+        return ("Product: " + _name + ", ID: " + _productId);
     }
 
     public int GetPrice()

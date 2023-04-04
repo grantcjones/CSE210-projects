@@ -5,7 +5,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        List<Video> myvideos = new List<Video>();
+        List<Video> myVideos = new List<Video>();
         
         Video vid1 = new Video();
         {
@@ -96,11 +96,11 @@ class Program
             vid3._comments.Add(com3);
         }
 
-        myvideos.Add(vid1);
-        myvideos.Add(vid2);
-        myvideos.Add(vid3);
+        myVideos.Add(vid1);
+        myVideos.Add(vid2);
+        myVideos.Add(vid3);
 
-        foreach (Video video in myvideos)
+        foreach (Video video in myVideos)
         {
             video.GetVideo();
         }

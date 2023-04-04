@@ -3,7 +3,6 @@ using static System.Console;
 public class Order
 {
     private List<string> _products = new List<string>();
-    // private string _customer;
 
     private int _cost;
     private int _shipCost;
@@ -16,12 +15,18 @@ public class Order
         _address = address;
     }
 
+    public string CostTotal()
+    {
+        int total = _shipCost + _cost;
+        return ($"Total Cost:\n ${total}");
+    }
+
     public void AddProduct(string product)
     {
         _products.Add(product);
     }
 
-    public void PackingLabel() //TODO Finish Output
+    public void PackingLabel()
     {   
         WriteLine("Shipping:");
 
@@ -29,10 +34,11 @@ public class Order
         {   
             WriteLine($"  {item}");
         }
+        
         WriteLine();
     }
 
-    public void ShippingLabel(string customer) //TODO Finish Output
+    public void ShippingLabel(string customer)
     {
         WriteLine("Ship to:");
         WriteLine($"  {customer}");

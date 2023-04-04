@@ -22,25 +22,16 @@ public class Address
         return _fullAddress;
     }
 
-    // public Address GetCountry()
-    // {
-    //     string className = "Address";
-    //     Type type = Type.GetType(className);
-    //     object instance = Activator.CreateInstance(type);
-
-    //     return _country;
-    // }
-
     public bool Origin()
     {
         if (_country == "USA")
         {
             return true;
         }
+
         else
         {
             return false;
         }
     }
-    
 }

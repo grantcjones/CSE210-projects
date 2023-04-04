@@ -9,12 +9,11 @@ public class Customer
     {
         _name = name;
         _address = address;
-        
     }
     
     public string GetCustomer()
     {
-        return (_name); //? Potential fix: add returned address as additional input?
+        return (_name);
     }
 
     public int CustomerOrigin(Address address) 
@@ -23,6 +22,7 @@ public class Customer
         {
             return 5;
         }
+
         else
         {
             return 35;

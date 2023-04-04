@@ -7,6 +7,7 @@ public class Comment
 
     public Comment()
     {
+        
     }
 
     public void Display()

@@ -12,7 +12,6 @@ public class Video
         
     }
 
-
     public int CommentNum(List<Comment> myList)
     {
         return myList.Count();
@@ -23,10 +22,10 @@ public class Video
         WriteLine($"Title: {_title}");
         WriteLine($"-{_author}, {_length} mins");
         WriteLine($"Comments ({CommentNum(_comments)})");
+        
         foreach (Comment comment in _comments)
         {
             comment.Display();
         }
     }
-
 }
